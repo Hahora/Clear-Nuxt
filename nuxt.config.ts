@@ -9,6 +9,9 @@ export default defineNuxtConfig({
   ],
 
   runtimeConfig: {
+    smtpUser: '',
+    smtpPass: '',
+    mailTo: '',
     public: {
       metrikaId: '',
     },

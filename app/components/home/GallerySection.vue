@@ -88,7 +88,8 @@ const categories = [
   },
 ]
 
-function scrollToContact() {
+function scrollToContact(service?: string) {
+  if (service) useState('preselected-service', () => '').value = service
   const el = document.querySelector('#contact')
   if (el) el.scrollIntoView({ behavior: 'smooth' })
 }
@@ -198,7 +199,7 @@ useIntersectionObserver(headerRef, ([entry]) => {
 
             <!-- Notch button -->
             <div class="absolute bottom-0 right-0 z-30 bg-sky-50 rounded-tl-3xl pt-3 pl-3">
-              <button class="btn-primary text-sm shadow-lg" @click="scrollToContact">
+              <button class="btn-primary text-sm shadow-lg" @click="scrollToContact(cat.title)">
                 <Icon icon="mdi:send" /> Заказать
               </button>
             </div>

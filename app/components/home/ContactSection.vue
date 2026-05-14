@@ -3,7 +3,7 @@ import { ref } from 'vue'
 import { useIntersectionObserver } from '@vueuse/core'
 import { Icon } from '@iconify/vue'
 
-const { form, errors, status, services, submit } = useLeadForm()
+const { form, phoneSuffix, errors, status, services, submit, formatPhone } = useLeadForm()
 
 const phone = '+7 928 196-45-95'
 const phoneTel = 'tel:+79281964595'
@@ -67,6 +67,16 @@ useIntersectionObserver(headerRef, ([entry]) => {
                 <p class="text-muted text-sm">Проверьте, что телефон доступен.</p>
               </div>
 
+              <!-- Error -->
+              <div v-else-if="status === 'error'" class="flex flex-col items-center text-center py-10">
+                <div class="w-20 h-20 rounded-full bg-rose-50 flex items-center justify-center mb-5">
+                  <Icon icon="mdi:alert-circle" class="text-rose-500 text-5xl" />
+                </div>
+                <h3 class="font-heading font-bold text-2xl text-ink mb-2">Ошибка отправки</h3>
+                <p class="text-muted mb-1">Не удалось отправить заявку.</p>
+                <p class="text-muted text-sm">Позвоните нам напрямую: <a href="tel:+79281964595" class="text-accent font-semibold">+7 928 196-45-95</a></p>
+              </div>
+
               <!-- Form -->
               <form v-else class="space-y-5" @submit.prevent="submit">
 
@@ -93,29 +103,43 @@ useIntersectionObserver(headerRef, ([entry]) => {
                     <label class="block text-sm font-medium text-ink mb-1.5">
                       Телефон <span class="text-rose-500">*</span>
                     </label>
-                    <input
-                      v-model="form.phone"
-                      type="tel"
-                      placeholder="+7 (___) ___-__-__"
-                      class="w-full px-4 py-3 rounded-xl border text-ink placeholder:text-muted/50 outline-none transition-all duration-200"
+                    <div
+                      class="flex items-center rounded-xl border overflow-hidden transition-all duration-200"
                       :class="errors.phone
-                        ? 'border-rose-400 bg-rose-50 focus:border-rose-500 focus:ring-2 focus:ring-rose-200'
-                        : 'border-surface bg-bg focus:border-accent focus:ring-2 focus:ring-accent/20'"
-                    />
+                        ? 'border-rose-400 bg-rose-50 focus-within:border-rose-500 focus-within:ring-2 focus-within:ring-rose-200'
+                        : 'border-surface bg-bg focus-within:border-accent focus-within:ring-2 focus-within:ring-accent/20'"
+                    >
+                      <span class="pl-4 pr-3 py-3 text-ink font-semibold text-sm select-none border-r border-surface shrink-0">+7</span>
+                      <input
+                        :value="phoneSuffix"
+                        type="tel"
+                        inputmode="tel"
+                        placeholder="928 196-45-95"
+                        maxlength="13"
+                        class="flex-1 px-3 py-3 bg-transparent text-ink placeholder:text-muted/50 outline-none"
+                        @input="formatPhone"
+                      />
+                    </div>
                     <p v-if="errors.phone" class="text-rose-500 text-xs mt-1">{{ errors.phone }}</p>
                   </div>
                 </div>
 
                 <!-- Service -->
                 <div>
-                  <label class="block text-sm font-medium text-ink mb-1.5">Тип услуги</label>
+                  <label class="block text-sm font-medium text-ink mb-1.5">
+                    Тип услуги <span class="text-rose-500">*</span>
+                  </label>
                   <select
                     v-model="form.service"
-                    class="w-full px-4 py-3 rounded-xl border border-surface bg-bg text-ink focus:border-accent focus:ring-2 focus:ring-accent/20 outline-none transition-all duration-200 appearance-none cursor-pointer"
+                    class="w-full px-4 py-3 rounded-xl border outline-none transition-all duration-200 appearance-none cursor-pointer text-ink"
+                    :class="errors.service
+                      ? 'border-rose-400 bg-rose-50 focus:border-rose-500 focus:ring-2 focus:ring-rose-200'
+                      : 'border-surface bg-bg focus:border-accent focus:ring-2 focus:ring-accent/20'"
                   >
                     <option value="" disabled>Выберите услугу</option>
                     <option v-for="s in services" :key="s" :value="s">{{ s }}</option>
                   </select>
+                  <p v-if="errors.service" class="text-rose-500 text-xs mt-1">{{ errors.service }}</p>
                 </div>
 
                 <!-- Comment -->
@@ -141,7 +165,10 @@ useIntersectionObserver(headerRef, ([entry]) => {
                 </button>
 
                 <p class="text-xs text-muted/50 text-center">
-                  Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности
+                  Нажимая кнопку, вы соглашаетесь с
+                  <NuxtLink to="/policy" target="_blank" class="underline underline-offset-2 hover:text-accent transition-colors duration-200">
+                    политикой конфиденциальности
+                  </NuxtLink>
                 </p>
               </form>
             </Transition>

@@ -68,7 +68,8 @@ const services = [
   },
 ]
 
-function scrollToContact() {
+function scrollToContact(service?: string) {
+  if (service) useState('preselected-service', () => '').value = service
   const el = document.querySelector('#contact')
   if (el) el.scrollIntoView({ behavior: 'smooth' })
 }
@@ -148,7 +149,7 @@ useIntersectionObserver(headerRef, ([entry]) => {
           </div>
 
           <div class="absolute bottom-0 right-0 z-20 bg-sky-50 rounded-tl-3xl pt-3 pl-3">
-            <button class="btn-primary text-sm shadow-lg" @click="scrollToContact">
+            <button class="btn-primary text-sm shadow-lg" @click="scrollToContact(services[0].title)">
               <Icon icon="mdi:send" />
               Заказать
             </button>
@@ -184,7 +185,7 @@ useIntersectionObserver(headerRef, ([entry]) => {
             </div>
             <button
               class="inline-flex items-center gap-1.5 text-sm font-semibold text-emerald-600 transition-all duration-200 hover:gap-2.5"
-              @click="scrollToContact"
+              @click="scrollToContact(services[1].title)"
             >
               Заказать <Icon icon="mdi:arrow-right" />
             </button>
@@ -220,7 +221,7 @@ useIntersectionObserver(headerRef, ([entry]) => {
             </div>
             <button
               class="inline-flex items-center gap-1.5 text-sm font-semibold text-sky-600 transition-all duration-200 hover:gap-2.5"
-              @click="scrollToContact"
+              @click="scrollToContact(services[2].title)"
             >
               Заказать <Icon icon="mdi:arrow-right" />
             </button>
@@ -263,7 +264,7 @@ useIntersectionObserver(headerRef, ([entry]) => {
           </div>
 
           <div class="absolute bottom-0 right-0 z-20 bg-sky-50 rounded-tl-3xl pt-3 pl-3">
-            <button class="btn-primary text-sm shadow-lg" @click="scrollToContact">
+            <button class="btn-primary text-sm shadow-lg" @click="scrollToContact(services[3].title)">
               <Icon icon="mdi:send" />
               Заказать
             </button>
