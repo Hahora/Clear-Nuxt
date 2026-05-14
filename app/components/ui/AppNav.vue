@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
 import { Icon } from '@iconify/vue'
+
+const route = useRoute()
+const router = useRouter()
 
 const isMenuOpen = ref(false)
 const isScrolled = ref(false)
@@ -28,6 +32,10 @@ onMounted(() => {
 
 function scrollTo(href: string) {
   isMenuOpen.value = false
+  if (route.path !== '/') {
+    router.push('/' + href)
+    return
+  }
   const el = document.querySelector(href)
   if (el) el.scrollIntoView({ behavior: 'smooth' })
 }
@@ -45,7 +53,7 @@ function scrollTo(href: string) {
       <nav class="flex items-center justify-between h-16 lg:h-20">
 
         <!-- Logo -->
-        <a href="#" @click.prevent="scrollTo('#')" class="flex items-center gap-2.5 group">
+        <a href="/" @click.prevent="route.path === '/' ? scrollTo('#') : router.push('/')" class="flex items-center gap-2.5 group">
           <div class="w-9 h-9 rounded-xl bg-accent flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform duration-200">
             <Icon icon="mdi:broom" class="text-white text-xl" />
           </div>

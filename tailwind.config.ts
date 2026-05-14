@@ -13,7 +13,7 @@ export default {
         bg: '#F8FAFB',
         ink: '#0F172A',
         primary: '#0EA5E9',
-        accent: '#10B981',
+        accent: '#0EA5E9',
         muted: '#64748B',
         surface: '#E2E8F0',
         'surface-dark': '#CBD5E1',

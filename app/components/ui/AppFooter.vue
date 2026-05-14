@@ -101,12 +101,16 @@ function scrollTo(href: string) {
       </div>
 
       <!-- Bottom row -->
-      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-white/40 text-xs">
-        <div class="flex flex-col items-center sm:items-start gap-1">
+      <div class="pt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-white/40 text-xs">
+        <div class="flex flex-col gap-1">
           <p>© {{ year }} Чистый Дом. Все права защищены.</p>
+          <p>ИП Смирнов Алексей Викторович · ОГРНИП 321615400087654 · ИНН 616512345678</p>
+          <p>344000, г. Ростов-на-Дону, ул. Большая Садовая, д. 25, оф. 14</p>
           <p>Разработано <a href="https://traffic-rock.com/" target="_blank" rel="noopener" class="text-white/60 font-medium hover:text-accent transition-colors duration-200">Цифровая скала</a></p>
         </div>
-        <a href="#" class="hover:text-white transition-colors duration-200">Политика конфиденциальности</a>
+        <NuxtLink to="/policy" class="hover:text-white transition-colors duration-200 whitespace-nowrap">
+          Политика конфиденциальности
+        </NuxtLink>
       </div>
     </div>
   </footer>

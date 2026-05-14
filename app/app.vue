@@ -9,5 +9,6 @@
       <NuxtPage />
     </main>
     <UiAppFooter />
+    <UiCookieBanner />
   </div>
 </template>

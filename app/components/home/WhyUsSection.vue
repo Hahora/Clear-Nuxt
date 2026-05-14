@@ -61,7 +61,7 @@ function scrollToContact() {
 </script>
 
 <template>
-  <section id="why-us" class="py-section bg-emerald-50 relative overflow-hidden">
+  <section id="why-us" class="py-section bg-sky-50 relative overflow-hidden">
 
     <!-- Background decorations -->
     <div class="absolute top-0 right-0 w-96 h-96 bg-accent/8 rounded-full translate-x-1/2 -translate-y-1/2 blur-3xl pointer-events-none" />

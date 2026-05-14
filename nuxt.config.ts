@@ -8,6 +8,12 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
   ],
 
+  runtimeConfig: {
+    public: {
+      metrikaId: '',
+    },
+  },
+
   app: {
     head: {
       charset: 'utf-8',

@@ -81,7 +81,7 @@ useIntersectionObserver(headerRef, ([entry]) => {
 </script>
 
 <template>
-  <section id="services" class="py-section bg-emerald-50">
+  <section id="services" class="py-section bg-sky-50">
     <div class="container-site">
 
       <!-- Header -->
@@ -147,7 +147,7 @@ useIntersectionObserver(headerRef, ([entry]) => {
             </div>
           </div>
 
-          <div class="absolute bottom-0 right-0 z-20 bg-emerald-50 rounded-tl-3xl pt-3 pl-3">
+          <div class="absolute bottom-0 right-0 z-20 bg-sky-50 rounded-tl-3xl pt-3 pl-3">
             <button class="btn-primary text-sm shadow-lg" @click="scrollToContact">
               <Icon icon="mdi:send" />
               Заказать
@@ -161,18 +161,18 @@ useIntersectionObserver(headerRef, ([entry]) => {
           :class="{ 'is-revealed': isVisible }"
           :style="{ transitionDelay: isVisible ? '0.22s' : '0s' }"
         >
-          <span class="absolute right-3 -top-2 font-heading font-black text-accent/10 leading-none select-none pointer-events-none"
+          <span class="absolute right-3 -top-2 font-heading font-black text-emerald-400/10 leading-none select-none pointer-events-none"
                 style="font-size: 90px;">02</span>
 
-          <div class="w-11 h-11 rounded-xl bg-accent/15 flex items-center justify-center mb-4 shrink-0">
-            <Icon icon="mdi:calendar-check" class="text-accent text-xl" />
+          <div class="w-11 h-11 rounded-xl bg-emerald-500/15 flex items-center justify-center mb-4 shrink-0">
+            <Icon icon="mdi:calendar-check" class="text-emerald-500 text-xl" />
           </div>
           <h3 class="font-heading font-bold text-lg text-ink mb-1.5">{{ services[1].title }}</h3>
           <p class="text-muted text-sm leading-relaxed mb-4">{{ services[1].description }}</p>
 
           <ul class="space-y-2 mb-4">
             <li v-for="item in services[1].items" :key="item" class="flex items-center gap-2 text-sm text-ink/75">
-              <Icon icon="mdi:check-circle" class="text-accent shrink-0 text-base" />
+              <Icon icon="mdi:check-circle" class="text-emerald-500 shrink-0 text-base" />
               {{ item }}
             </li>
           </ul>
@@ -183,7 +183,7 @@ useIntersectionObserver(headerRef, ([entry]) => {
               <p class="font-heading font-bold text-ink">{{ services[1].price }}</p>
             </div>
             <button
-              class="inline-flex items-center gap-1.5 text-sm font-semibold text-accent transition-all duration-200 hover:gap-2.5"
+              class="inline-flex items-center gap-1.5 text-sm font-semibold text-emerald-600 transition-all duration-200 hover:gap-2.5"
               @click="scrollToContact"
             >
               Заказать <Icon icon="mdi:arrow-right" />
@@ -262,7 +262,7 @@ useIntersectionObserver(headerRef, ([entry]) => {
             </div>
           </div>
 
-          <div class="absolute bottom-0 right-0 z-20 bg-emerald-50 rounded-tl-3xl pt-3 pl-3">
+          <div class="absolute bottom-0 right-0 z-20 bg-sky-50 rounded-tl-3xl pt-3 pl-3">
             <button class="btn-primary text-sm shadow-lg" @click="scrollToContact">
               <Icon icon="mdi:send" />
               Заказать

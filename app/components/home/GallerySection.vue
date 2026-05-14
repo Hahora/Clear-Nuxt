@@ -101,7 +101,7 @@ useIntersectionObserver(headerRef, ([entry]) => {
 </script>
 
 <template>
-  <section id="gallery" class="py-section bg-emerald-50">
+  <section id="gallery" class="py-section bg-sky-50">
     <div class="container-site">
 
       <!-- Header -->
@@ -197,7 +197,7 @@ useIntersectionObserver(headerRef, ([entry]) => {
             </div>
 
             <!-- Notch button -->
-            <div class="absolute bottom-0 right-0 z-30 bg-emerald-50 rounded-tl-3xl pt-3 pl-3">
+            <div class="absolute bottom-0 right-0 z-30 bg-sky-50 rounded-tl-3xl pt-3 pl-3">
               <button class="btn-primary text-sm shadow-lg" @click="scrollToContact">
                 <Icon icon="mdi:send" /> Заказать
               </button>

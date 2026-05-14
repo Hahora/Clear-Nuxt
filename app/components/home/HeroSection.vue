@@ -33,7 +33,7 @@ onMounted(() => {
 
     <!-- Background -->
     <div class="absolute inset-0 overflow-hidden pointer-events-none">
-      <div class="absolute inset-0 bg-gradient-to-br from-bg via-sky-50/30 to-emerald-50/30" />
+      <div class="absolute inset-0 bg-gradient-to-br from-bg via-sky-50/30 to-sky-50/30" />
       <div class="absolute inset-0 opacity-[0.18] sm:opacity-[0.28]"
            style="background-image: radial-gradient(circle, #cbd5e1 1px, transparent 1px); background-size: 32px 32px;" />
       <div class="absolute top-1/3 right-0 w-[500px] h-[500px] bg-primary/6 rounded-full translate-x-1/2 blur-3xl" />
@@ -74,7 +74,7 @@ onMounted(() => {
           <div class="relative rounded-2xl sm:rounded-3xl overflow-hidden aspect-[4/3] bg-slate-100">
 
             <!-- Placeholder -->
-            <div class="absolute inset-0 bg-gradient-to-br from-slate-200 via-slate-100 to-emerald-50/60 flex items-center justify-center">
+            <div class="absolute inset-0 bg-gradient-to-br from-slate-200 via-slate-100 to-sky-50/60 flex items-center justify-center">
               <div class="text-center select-none">
                 <Icon icon="mdi:broom" class="text-slate-300 mb-3" style="font-size: 72px" />
                 <p class="text-slate-400 font-medium">Фото уборки</p>
@@ -126,7 +126,7 @@ onMounted(() => {
 
     <!-- Scroll / Back to top -->
     <button
-      class="hidden lg:flex fixed right-10 xl:right-14 bottom-10 z-50 w-12 h-12 rounded-full bg-accent items-center justify-center text-white shadow-lg hover:bg-emerald-600 hover:scale-105 transition-all duration-200"
+      class="hidden lg:flex fixed right-10 xl:right-14 bottom-10 z-50 w-12 h-12 rounded-full bg-accent items-center justify-center text-white shadow-lg hover:bg-sky-600 hover:scale-105 transition-all duration-200"
       :class="{ 'animate-bounce': !isScrolled }"
       :aria-label="isScrolled ? 'Наверх' : 'Прокрутить вниз'"
       @click="isScrolled ? scrollToTop() : scrollTo('#services')"

@@ -22,3 +22,10 @@ logs
 .env
 .env.*
 !.env.example
+
+# Dev artifacts
+.claude/
+.playwright-mcp/
+fonts_temp/
+*.png
+*.zip
