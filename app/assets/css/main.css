@@ -1,0 +1,169 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Fonts ─────────────────────────────────────────── */
+@font-face {
+  font-family: 'Inter';
+  src: url('~/assets/fonts/Inter-Variable.ttf') format('truetype');
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Onest';
+  src: url('~/assets/fonts/Onest-Variable.ttf') format('truetype');
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+}
+
+/* ─── Base ───────────────────────────────────────────── */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-bg text-ink font-sans;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+
+  * {
+    @apply box-border;
+  }
+}
+
+/* ─── Components ─────────────────────────────────────── */
+@layer components {
+  .container-site {
+    @apply w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-label {
+    @apply text-label font-semibold uppercase tracking-widest text-accent;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2
+           bg-accent text-white font-semibold
+           px-6 py-3.5 rounded-xl
+           transition-all duration-200 ease-smooth
+           hover:bg-emerald-600 hover:shadow-lg hover:-translate-y-0.5
+           active:translate-y-0;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2
+           border-2 border-ink text-ink font-semibold
+           px-6 py-3.5 rounded-xl
+           transition-all duration-200 ease-smooth
+           hover:bg-ink hover:text-white hover:-translate-y-0.5
+           active:translate-y-0;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2
+           text-ink font-semibold
+           px-4 py-2 rounded-xl
+           transition-all duration-200 ease-smooth
+           hover:bg-surface;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl p-6 shadow-card
+           transition-all duration-300 ease-smooth
+           hover:shadow-card-hover hover:-translate-y-1;
+  }
+
+  .section-divider {
+    @apply w-12 h-1 bg-accent rounded-full;
+  }
+}
+
+/* ─── Reveal animation ───────────────────────────────── */
+.reveal-item {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.reveal-item.is-revealed {
+  opacity: 1;
+  transform: none;
+}
+
+/* ─── Before/After Slider ────────────────────────────── */
+.before-after-slider {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+  cursor: col-resize;
+  user-select: none;
+  touch-action: none;
+}
+
+.before-after-slider .after-img {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.before-after-slider .divider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: white;
+  z-index: 10;
+  transform: translateX(-50%);
+}
+
+.before-after-slider .divider-handle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 44px;
+  height: 44px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+}
+
+/* ─── Swiper custom ──────────────────────────────────── */
+.swiper-pagination-bullet {
+  @apply bg-muted opacity-50;
+}
+.swiper-pagination-bullet-active {
+  @apply bg-accent opacity-100;
+}
+
+/* ─── Nav link underline ─────────────────────────────── */
+.nav-link {
+  @apply relative text-ink/70 hover:text-ink transition-colors duration-200;
+}
+.nav-link::after {
+  content: '';
+  @apply absolute bottom-0 left-0 w-0 h-0.5 bg-accent
+         transition-all duration-300 ease-smooth;
+}
+.nav-link:hover::after {
+  @apply w-full;
+}
+
+/* ─── Process connector line ─────────────────────────── */
+.process-line {
+  @apply hidden lg:block absolute top-10 left-1/2 w-full h-0.5 bg-surface z-0;
+}
