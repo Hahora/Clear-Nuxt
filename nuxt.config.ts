@@ -6,7 +6,14 @@ export default defineNuxtConfig({
   modules: [
     ['@nuxtjs/tailwindcss', { cssPath: '~/assets/css/main.css' }],
     '@vueuse/nuxt',
+    '@nuxtjs/icon',
   ],
+
+  icon: {
+    serverBundle: {
+      collections: ['mdi'],
+    },
+  },
 
   runtimeConfig: {
     smtpUser: '',

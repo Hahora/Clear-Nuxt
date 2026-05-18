@@ -47,7 +47,7 @@ function goContact() {
         <div
           class="w-9 h-9 rounded-xl bg-accent flex items-center justify-center group-hover:scale-105 transition-transform duration-200"
         >
-          <Icon icon="mdi:broom" class="text-white text-xl" />
+          <Icon name="mdi:broom" class="text-white text-xl" />
         </div>
         <span class="font-heading font-bold text-lg text-ink">
           Чистый <span class="text-accent">Дом</span>
@@ -83,14 +83,14 @@ function goContact() {
       <!-- Кнопки -->
       <div class="flex flex-wrap items-center justify-center gap-4">
         <button class="btn-primary" @click="goHome">
-          <Icon icon="mdi:home" />
+          <Icon name="mdi:home" />
           На главную
         </button>
         <button
           class="inline-flex items-center gap-2 font-semibold text-sm text-ink hover:text-accent border-2 border-surface hover:border-accent px-6 py-3.5 rounded-xl transition-all duration-200"
           @click="goContact"
         >
-          <Icon icon="mdi:send" />
+          <Icon name="mdi:send" />
           Оставить заявку
         </button>
       </div>

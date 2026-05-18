@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { useIntersectionObserver } from '@vueuse/core'
-import { Icon } from '@iconify/vue'
 
 const { form, phoneSuffix, errors, status, services, submit, formatPhone } = useLeadForm()
 
@@ -49,7 +48,7 @@ useIntersectionObserver(headerRef, ([entry]) => {
 
           <!-- Form header stripe -->
           <div class="bg-gradient-to-r from-accent to-sky-600 px-8 py-4 flex items-center gap-3">
-            <Icon icon="mdi:send" class="text-white text-xl" />
+            <Icon name="mdi:send" class="text-white text-xl" />
             <p class="text-white font-semibold">Бесплатный расчёт стоимости</p>
             <span class="ml-auto text-white/70 text-sm hidden sm:block">Ответим за 15 мин</span>
           </div>
@@ -60,7 +59,7 @@ useIntersectionObserver(headerRef, ([entry]) => {
               <!-- Success -->
               <div v-if="status === 'success'" class="flex flex-col items-center text-center py-10">
                 <div class="w-20 h-20 rounded-full bg-accent/10 flex items-center justify-center mb-5">
-                  <Icon icon="mdi:check-circle" class="text-accent text-5xl" />
+                  <Icon name="mdi:check-circle" class="text-accent text-5xl" />
                 </div>
                 <h3 class="font-heading font-bold text-2xl text-ink mb-2">Заявка принята!</h3>
                 <p class="text-muted mb-1">Перезвоним вам в течение 15 минут.</p>
@@ -70,7 +69,7 @@ useIntersectionObserver(headerRef, ([entry]) => {
               <!-- Error -->
               <div v-else-if="status === 'error'" class="flex flex-col items-center text-center py-10">
                 <div class="w-20 h-20 rounded-full bg-rose-50 flex items-center justify-center mb-5">
-                  <Icon icon="mdi:alert-circle" class="text-rose-500 text-5xl" />
+                  <Icon name="mdi:alert-circle" class="text-rose-500 text-5xl" />
                 </div>
                 <h3 class="font-heading font-bold text-2xl text-ink mb-2">Ошибка отправки</h3>
                 <p class="text-muted mb-1">Не удалось отправить заявку.</p>
@@ -159,8 +158,8 @@ useIntersectionObserver(headerRef, ([entry]) => {
                   :disabled="status === 'loading'"
                   class="btn-primary w-full py-4 text-base justify-center disabled:opacity-70 disabled:cursor-not-allowed"
                 >
-                  <Icon v-if="status === 'loading'" icon="mdi:loading" class="animate-spin" />
-                  <Icon v-else icon="mdi:send" />
+                  <Icon v-if="status === 'loading'" name="mdi:loading" class="animate-spin" />
+                  <Icon v-else name="mdi:send" />
                   {{ status === 'loading' ? 'Отправляем...' : 'Оставить заявку' }}
                 </button>
 
@@ -186,12 +185,12 @@ useIntersectionObserver(headerRef, ([entry]) => {
               {{ phone }}
             </a>
             <a :href="phoneTel" class="inline-flex items-center gap-2 bg-accent text-white font-semibold text-sm px-5 py-3 rounded-xl hover:bg-sky-600 transition-colors duration-200">
-              <Icon icon="mdi:phone" />
+              <Icon name="mdi:phone" />
               Позвонить
             </a>
             <!-- Working hours -->
             <div class="flex items-center gap-2 mt-5 pt-5 border-t border-white/10">
-              <Icon icon="mdi:clock-outline" class="text-white/40 text-lg shrink-0" />
+              <Icon name="mdi:clock-outline" class="text-white/40 text-lg shrink-0" />
               <p class="text-white/50 text-sm">Работаем ежедневно <span class="text-white/80 font-medium">8:00 – 22:00</span></p>
             </div>
           </div>
@@ -199,7 +198,7 @@ useIntersectionObserver(headerRef, ([entry]) => {
           <!-- Guarantee -->
           <div class="flex items-start gap-4 bg-accent/5 border border-accent/20 rounded-2xl p-5">
             <div class="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center shrink-0">
-              <Icon icon="mdi:shield-check" class="text-accent text-xl" />
+              <Icon name="mdi:shield-check" class="text-accent text-xl" />
             </div>
             <div>
               <p class="font-semibold text-ink text-sm mb-1">Гарантия качества</p>

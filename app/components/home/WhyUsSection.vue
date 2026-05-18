@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { useIntersectionObserver } from '@vueuse/core'
-import { Icon } from '@iconify/vue'
 
 const advantages = [
   {
@@ -104,7 +103,7 @@ function scrollToContact() {
             class="w-12 h-12 rounded-xl flex items-center justify-center mb-4 relative z-10"
             :class="item.bg"
           >
-            <Icon :icon="item.icon" class="text-2xl" :class="item.color" />
+            <Icon :name="item.icon" class="text-2xl" :class="item.color" />
           </div>
 
           <h3 class="font-heading font-semibold text-ink text-base mb-2 relative z-10">
@@ -128,7 +127,7 @@ function scrollToContact() {
             <p class="text-muted text-sm">Закажите первую уборку и оцените результат</p>
           </div>
           <button class="btn-primary shrink-0 whitespace-nowrap" @click="scrollToContact">
-            <Icon icon="mdi:send" />
+            <Icon name="mdi:send" />
             Оставить заявку
           </button>
         </div>

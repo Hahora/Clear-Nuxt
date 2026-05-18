@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { ref, computed, onMounted, onUnmounted } from 'vue'
-import { Icon } from '@iconify/vue'
 
 const props = defineProps<{
   beforeSrc: string
@@ -131,7 +130,7 @@ onUnmounted(() => {
       :style="{ left: `${position}%` }"
     >
       <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-11 h-11 bg-white rounded-full shadow-lg flex items-center justify-center">
-        <Icon icon="mdi:arrow-left-right" class="text-ink text-lg" />
+        <Icon name="mdi:arrow-left-right" class="text-ink text-lg" />
       </div>
     </div>
 
