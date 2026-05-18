@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { ref, onMounted } from "vue";
-import { Icon } from "@iconify/vue";
 
 const props = defineProps<{
   error: { statusCode: number; statusMessage?: string };
