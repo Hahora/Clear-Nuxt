@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { useIntersectionObserver } from '@vueuse/core'
-import { Icon } from '@iconify/vue'
 
 const faqs = [
   {
@@ -89,7 +88,7 @@ useIntersectionObserver(headerRef, ([entry]) => {
               class="w-8 h-8 rounded-full bg-surface flex items-center justify-center shrink-0 transition-transform duration-300"
               :class="openIndex === i ? 'rotate-45 bg-accent/15' : ''"
             >
-              <Icon icon="mdi:plus" class="text-ink text-sm" :class="openIndex === i ? 'text-accent' : ''" />
+              <Icon name="mdi:plus" class="text-ink text-sm" :class="openIndex === i ? 'text-accent' : ''" />
             </span>
           </button>
 
@@ -116,14 +115,14 @@ useIntersectionObserver(headerRef, ([entry]) => {
       >
         <div class="bg-white rounded-2xl shadow-card px-6 py-5 flex flex-col sm:flex-row items-center gap-4">
           <div class="w-11 h-11 rounded-xl bg-accent/10 flex items-center justify-center shrink-0">
-            <Icon icon="mdi:chat-question-outline" class="text-accent text-xl" />
+            <Icon name="mdi:chat-question-outline" class="text-accent text-xl" />
           </div>
           <div class="flex-1 text-center sm:text-left">
             <p class="font-semibold text-ink">Не нашли ответ?</p>
             <p class="text-muted text-sm">Задайте свой вопрос — ответим в течение 15 минут.</p>
           </div>
           <button class="btn-primary shrink-0 whitespace-nowrap" @click="scrollToContact">
-            <Icon icon="mdi:send" />
+            <Icon name="mdi:send" />
             Задать вопрос
           </button>
         </div>

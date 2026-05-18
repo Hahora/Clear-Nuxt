@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { useIntersectionObserver } from '@vueuse/core'
-import { Icon } from '@iconify/vue'
 
 const steps = [
   {
@@ -92,7 +91,7 @@ useIntersectionObserver(headerRef, ([entry]) => {
                 class="w-16 h-16 rounded-full bg-white shadow-card border-2 border-surface/80 flex items-center justify-center transition-all duration-300 hover:shadow-card-hover hover:scale-105"
                 :class="step.color.split(' ')[0].replace('15', '10')"
               >
-                <Icon :icon="step.icon" class="text-2xl" :class="step.color.split(' ')[1]" />
+                <Icon :name="step.icon" class="text-2xl" :class="step.color.split(' ')[1]" />
               </div>
               <!-- Number badge -->
               <span

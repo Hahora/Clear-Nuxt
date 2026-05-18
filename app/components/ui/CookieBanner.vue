@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
-import { Icon } from '@iconify/vue'
 
 const { $initMetrika } = useNuxtApp()
 
@@ -34,7 +33,7 @@ function accept() {
     >
       <div class="container-site py-4 flex flex-col sm:flex-row items-start sm:items-center gap-4">
         <div class="flex items-start gap-3 flex-1">
-          <Icon icon="mdi:cookie" class="text-accent text-xl shrink-0 mt-0.5" />
+          <Icon name="mdi:cookie" class="text-accent text-xl shrink-0 mt-0.5" />
           <p class="text-white/80 text-sm leading-relaxed">
             Мы используем файлы cookie и сервис Яндекс.Метрика для анализа посещаемости.
             Продолжая пользоваться сайтом, вы соглашаетесь с нашей
@@ -54,7 +53,7 @@ function accept() {
             class="btn-primary text-sm px-5 py-2.5 whitespace-nowrap"
             @click="accept"
           >
-            <Icon icon="mdi:check" />
+            <Icon name="mdi:check" />
             Принять
           </button>
         </div>

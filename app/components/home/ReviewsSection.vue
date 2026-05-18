@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { useIntersectionObserver } from '@vueuse/core'
-import { Icon } from '@iconify/vue'
 
 const reviews = [
   {
@@ -115,7 +114,7 @@ useIntersectionObserver(headerRef, ([entry]) => {
               <Icon
                 v-for="n in 5"
                 :key="n"
-                icon="mdi:star"
+                name="mdi:star"
                 class="text-amber-400 text-sm"
               />
             </div>

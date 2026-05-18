@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { onMounted, onUnmounted, ref } from 'vue'
 import { gsap } from 'gsap'
-import { Icon } from '@iconify/vue'
 
 const phone = '+7 928 196-45-95'
 const phoneTel = 'tel:+79281964595'
@@ -56,14 +55,14 @@ onMounted(() => {
           </p>
           <div class="flex flex-wrap items-center gap-4">
             <button class="btn-primary" @click="scrollTo('#contact')">
-              <Icon icon="mdi:calculator-variant-outline" />
+              <Icon name="mdi:calculator-variant-outline" />
               Рассчитать стоимость
             </button>
             <a
               :href="phoneTel"
               class="inline-flex items-center gap-2 text-sm font-semibold text-ink hover:text-accent transition-colors duration-200"
             >
-              <Icon icon="mdi:phone" class="text-accent text-base" />
+              <Icon name="mdi:phone" class="text-accent text-base" />
               {{ phone }}
             </a>
           </div>
@@ -76,7 +75,7 @@ onMounted(() => {
             <!-- Placeholder -->
             <div class="absolute inset-0 bg-gradient-to-br from-slate-200 via-slate-100 to-green-50/60 flex items-center justify-center">
               <div class="text-center select-none">
-                <Icon icon="mdi:broom" class="text-slate-300 mb-3" style="font-size: 72px" />
+                <Icon name="mdi:broom" class="text-slate-300 mb-3" style="font-size: 72px" />
                 <p class="text-slate-400 font-medium">Фото уборки</p>
                 <p class="text-slate-300 text-xs mt-1">public/images/hero/cleaning-hero.jpg</p>
               </div>
@@ -100,7 +99,7 @@ onMounted(() => {
               @click="scrollTo('#contact')"
             >
               Заказать
-              <Icon icon="mdi:arrow-right" />
+              <Icon name="mdi:arrow-right" />
             </button>
           </div>
 
@@ -111,7 +110,7 @@ onMounted(() => {
               class="inline-flex items-center gap-2.5 bg-white rounded-xl px-3 py-2 shadow-md hover:shadow-lg transition-shadow duration-200"
             >
               <div class="w-7 h-7 rounded-lg bg-accent flex items-center justify-center shrink-0">
-                <Icon icon="mdi:phone" class="text-white text-xs" />
+                <Icon name="mdi:phone" class="text-white text-xs" />
               </div>
               <div>
                 <p class="text-[10px] text-muted leading-none mb-0.5">Позвонить</p>
@@ -132,7 +131,7 @@ onMounted(() => {
       @click="isScrolled ? scrollToTop() : scrollTo('#services')"
     >
       <Icon
-        :icon="isScrolled ? 'mdi:chevron-up' : 'mdi:chevron-down'"
+        :name="isScrolled ? 'mdi:chevron-up' : 'mdi:chevron-down'"
         class="text-xl transition-transform duration-300"
       />
     </button>

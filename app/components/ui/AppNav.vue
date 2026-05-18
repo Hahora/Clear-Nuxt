@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import { Icon } from '@iconify/vue'
 
 const route = useRoute()
 const router = useRouter()
@@ -55,7 +54,7 @@ function scrollTo(href: string) {
         <!-- Logo -->
         <a href="/" @click.prevent="route.path === '/' ? scrollTo('#') : router.push('/')" class="flex items-center gap-2.5 group">
           <div class="w-9 h-9 rounded-xl bg-accent flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform duration-200">
-            <Icon icon="mdi:broom" class="text-white text-xl" />
+            <Icon name="mdi:broom" class="text-white text-xl" />
           </div>
           <span class="font-heading font-bold text-lg text-ink leading-tight">
             Чистый<br class="hidden" /><span class="text-accent"> Дом</span>
@@ -87,14 +86,14 @@ function scrollTo(href: string) {
         <!-- Mobile: phone + burger -->
         <div class="flex items-center gap-3 lg:hidden">
           <a :href="phoneTel" class="flex items-center justify-center w-10 h-10 rounded-xl bg-accent text-white">
-            <Icon icon="mdi:phone" class="text-xl" />
+            <Icon name="mdi:phone" class="text-xl" />
           </a>
           <button
             class="flex items-center justify-center w-10 h-10 rounded-xl hover:bg-surface transition-colors duration-200"
             @click="isMenuOpen = !isMenuOpen"
             aria-label="Меню"
           >
-            <Icon :icon="isMenuOpen ? 'mdi:close' : 'mdi:menu'" class="text-2xl text-ink" />
+            <Icon :name="isMenuOpen ? 'mdi:close' : 'mdi:menu'" class="text-2xl text-ink" />
           </button>
         </div>
 
@@ -114,7 +113,7 @@ function scrollTo(href: string) {
           </button>
           <div class="pt-3 mt-2 border-t border-surface">
             <a :href="phoneTel" class="flex items-center gap-2 px-4 py-3 text-ink font-semibold">
-              <Icon icon="mdi:phone" class="text-accent" />
+              <Icon name="mdi:phone" class="text-accent" />
               {{ phone }}
             </a>
             <button class="btn-primary w-full mt-2 mx-0" @click="scrollTo('#contact')">

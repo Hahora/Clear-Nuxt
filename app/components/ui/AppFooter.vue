@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { Icon } from '@iconify/vue'
 
 const phone = '+7 928 196-45-95'
 const phoneTel = 'tel:+79281964595'
@@ -38,7 +37,7 @@ function scrollTo(href: string) {
         <div class="sm:col-span-2 lg:col-span-1">
           <div class="flex items-center gap-2.5 mb-4">
             <div class="w-9 h-9 rounded-xl bg-accent flex items-center justify-center">
-              <Icon icon="mdi:broom" class="text-white text-xl" />
+              <Icon name="mdi:broom" class="text-white text-xl" />
             </div>
             <span class="font-heading font-bold text-lg">
               Чистый <span class="text-accent">Дом</span>
@@ -48,7 +47,7 @@ function scrollTo(href: string) {
             Профессиональный клининг квартир, домов и коммерческих помещений с гарантией качества.
           </p>
           <a :href="phoneTel" class="inline-flex items-center gap-2 text-white font-semibold hover:text-accent transition-colors duration-200">
-            <Icon icon="mdi:phone" class="text-accent" />
+            <Icon name="mdi:phone" class="text-accent" />
             {{ phone }}
           </a>
         </div>
@@ -93,7 +92,7 @@ function scrollTo(href: string) {
             class="btn-primary w-full justify-center text-sm"
             @click="scrollTo('#contact')"
           >
-            <Icon icon="mdi:send" />
+            <Icon name="mdi:send" />
             Оставить заявку
           </button>
         </div>

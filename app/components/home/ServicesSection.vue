@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { useIntersectionObserver } from '@vueuse/core'
-import { Icon } from '@iconify/vue'
 
 const services = [
   {
@@ -119,11 +118,11 @@ useIntersectionObserver(headerRef, ([entry]) => {
             />
 
             <div class="w-11 h-11 rounded-xl bg-accent/20 flex items-center justify-center mb-3 shrink-0">
-              <Icon icon="mdi:broom" class="text-accent text-xl" />
+              <Icon name="mdi:broom" class="text-accent text-xl" />
             </div>
 
             <span class="inline-flex items-center gap-1.5 bg-accent/25 text-accent text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full w-fit mb-3">
-              <Icon icon="mdi:star" class="text-[10px]" /> Популярно
+              <Icon name="mdi:star" class="text-[10px]" /> Популярно
             </span>
 
             <h3 class="font-heading font-bold text-xl text-white mb-2 sm:max-w-[52%]">{{ services[0].title }}</h3>
@@ -131,7 +130,7 @@ useIntersectionObserver(headerRef, ([entry]) => {
 
             <div class="grid grid-cols-2 gap-x-4 gap-y-2 mb-auto relative z-10 sm:max-w-[52%]">
               <div v-for="item in services[0].items" :key="item" class="flex items-start gap-1.5 text-sm text-white/65">
-                <Icon icon="mdi:check" class="text-accent shrink-0 mt-0.5 text-sm" />
+                <Icon name="mdi:check" class="text-accent shrink-0 mt-0.5 text-sm" />
                 {{ item }}
               </div>
             </div>
@@ -150,7 +149,7 @@ useIntersectionObserver(headerRef, ([entry]) => {
 
           <div class="absolute bottom-0 right-0 z-20 bg-green-50 rounded-tl-3xl pt-3 pl-3">
             <button class="btn-primary text-sm shadow-lg" @click="scrollToContact(services[0].title)">
-              <Icon icon="mdi:send" />
+              <Icon name="mdi:send" />
               Заказать
             </button>
           </div>
@@ -166,14 +165,14 @@ useIntersectionObserver(headerRef, ([entry]) => {
                 style="font-size: 90px;">02</span>
 
           <div class="w-11 h-11 rounded-xl bg-emerald-500/15 flex items-center justify-center mb-4 shrink-0">
-            <Icon icon="mdi:calendar-check" class="text-emerald-500 text-xl" />
+            <Icon name="mdi:calendar-check" class="text-emerald-500 text-xl" />
           </div>
           <h3 class="font-heading font-bold text-lg text-ink mb-1.5">{{ services[1].title }}</h3>
           <p class="text-muted text-sm leading-relaxed mb-4">{{ services[1].description }}</p>
 
           <ul class="space-y-2 mb-4">
             <li v-for="item in services[1].items" :key="item" class="flex items-center gap-2 text-sm text-ink/75">
-              <Icon icon="mdi:check-circle" class="text-emerald-500 shrink-0 text-base" />
+              <Icon name="mdi:check-circle" class="text-emerald-500 shrink-0 text-base" />
               {{ item }}
             </li>
           </ul>
@@ -187,7 +186,7 @@ useIntersectionObserver(headerRef, ([entry]) => {
               class="inline-flex items-center gap-1.5 text-sm font-semibold text-emerald-600 transition-all duration-200 hover:gap-2.5"
               @click="scrollToContact(services[1].title)"
             >
-              Заказать <Icon icon="mdi:arrow-right" />
+              Заказать <Icon name="mdi:arrow-right" />
             </button>
           </div>
         </div>
@@ -202,14 +201,14 @@ useIntersectionObserver(headerRef, ([entry]) => {
                 style="font-size: 90px;">03</span>
 
           <div class="w-11 h-11 rounded-xl bg-sky-100 flex items-center justify-center mb-4 shrink-0">
-            <Icon icon="mdi:window-closed-variant" class="text-sky-600 text-xl" />
+            <Icon name="mdi:window-closed-variant" class="text-sky-600 text-xl" />
           </div>
           <h3 class="font-heading font-bold text-lg text-ink mb-1.5">{{ services[2].title }}</h3>
           <p class="text-muted text-sm leading-relaxed mb-4">{{ services[2].description }}</p>
 
           <ul class="space-y-2 mb-4 flex-1">
             <li v-for="item in services[2].items" :key="item" class="flex items-center gap-2 text-sm text-ink/75">
-              <Icon icon="mdi:check-circle" class="text-sky-500 shrink-0 text-base" />
+              <Icon name="mdi:check-circle" class="text-sky-500 shrink-0 text-base" />
               {{ item }}
             </li>
           </ul>
@@ -223,7 +222,7 @@ useIntersectionObserver(headerRef, ([entry]) => {
               class="inline-flex items-center gap-1.5 text-sm font-semibold text-sky-600 transition-all duration-200 hover:gap-2.5"
               @click="scrollToContact(services[2].title)"
             >
-              Заказать <Icon icon="mdi:arrow-right" />
+              Заказать <Icon name="mdi:arrow-right" />
             </button>
           </div>
         </div>
@@ -239,14 +238,14 @@ useIntersectionObserver(headerRef, ([entry]) => {
                   style="font-size: 120px;">04</span>
 
             <div class="w-11 h-11 rounded-xl bg-violet-100 flex items-center justify-center mb-4 shrink-0">
-              <Icon icon="mdi:sofa" class="text-violet-600 text-xl" />
+              <Icon name="mdi:sofa" class="text-violet-600 text-xl" />
             </div>
             <h3 class="font-heading font-bold text-lg text-ink mb-1.5">{{ services[3].title }}</h3>
             <p class="text-muted text-sm leading-relaxed mb-4">{{ services[3].description }}</p>
 
             <div class="grid grid-cols-2 gap-x-6 gap-y-2 mb-4">
               <div v-for="item in services[3].items" :key="item" class="flex items-start gap-2 text-sm text-ink/75">
-                <Icon icon="mdi:check-circle" class="text-violet-500 shrink-0 text-base mt-0.5" />
+                <Icon name="mdi:check-circle" class="text-violet-500 shrink-0 text-base mt-0.5" />
                 {{ item }}
               </div>
             </div>
@@ -265,7 +264,7 @@ useIntersectionObserver(headerRef, ([entry]) => {
 
           <div class="absolute bottom-0 right-0 z-20 bg-green-50 rounded-tl-3xl pt-3 pl-3">
             <button class="btn-primary text-sm shadow-lg" @click="scrollToContact(services[3].title)">
-              <Icon icon="mdi:send" />
+              <Icon name="mdi:send" />
               Заказать
             </button>
           </div>

@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { useIntersectionObserver } from '@vueuse/core'
-import { Icon } from '@iconify/vue'
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import { Pagination, Autoplay } from 'swiper/modules'
 import 'swiper/css'
@@ -153,7 +152,7 @@ useIntersectionObserver(headerRef, ([entry]) => {
                     class="absolute inset-0 bg-gradient-to-br flex items-center justify-center"
                     :class="cat.placeholder"
                   >
-                    <Icon :icon="cat.placeholderIcon" class="text-white/15" style="font-size: 80px" />
+                    <Icon :name="cat.placeholderIcon" class="text-white/15" style="font-size: 80px" />
                   </div>
                   <!-- Real photo -->
                   <img
@@ -184,7 +183,7 @@ useIntersectionObserver(headerRef, ([entry]) => {
                   class="w-10 h-10 rounded-xl flex items-center justify-center mb-3"
                   :class="cat.accentBg"
                 >
-                  <Icon :icon="cat.icon" class="text-lg" :class="cat.accentColor" />
+                  <Icon :name="cat.icon" class="text-lg" :class="cat.accentColor" />
                 </div>
                 <h3
                   class="font-heading font-bold text-white mb-1"
@@ -200,7 +199,7 @@ useIntersectionObserver(headerRef, ([entry]) => {
             <!-- Notch button -->
             <div class="absolute bottom-0 right-0 z-30 bg-green-50 rounded-tl-3xl pt-3 pl-3">
               <button class="btn-primary text-sm shadow-lg" @click="scrollToContact(cat.title)">
-                <Icon icon="mdi:send" /> Заказать
+                <Icon name="mdi:send" /> Заказать
               </button>
             </div>
           </div>
