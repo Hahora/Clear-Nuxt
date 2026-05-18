@@ -315,7 +315,7 @@ useSeoMeta({
   @apply text-sm text-ink/80 leading-relaxed;
 }
 .prose-policy a {
-  @apply text-accent underline underline-offset-2 hover:text-sky-600 transition-colors duration-200;
+  @apply text-accent underline underline-offset-2 hover:text-green-800 transition-colors duration-200;
 }
 .prose-policy strong {
   @apply text-ink font-semibold;
