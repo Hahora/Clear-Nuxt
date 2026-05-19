@@ -7,21 +7,21 @@ const steps = [
     icon: 'mdi:phone-incoming-outline',
     title: 'Заявка',
     description: 'Позвоните или заполните форму — ответим быстро.',
-    color: 'bg-accent/15 text-accent',
-    dot: 'bg-accent',
+    color: 'bg-emerald-500/15 text-emerald-500',
+    dot: 'bg-emerald-500',
   },
   {
     icon: 'mdi:clipboard-text-outline',
     title: 'Уточняем детали',
     description: 'Обсудим тип помещения, объём и удобное время.',
-    color: 'bg-primary/15 text-primary',
-    dot: 'bg-primary',
+    color: 'bg-sky-500/15 text-sky-500',
+    dot: 'bg-sky-500',
   },
   {
     icon: 'mdi:handshake-outline',
     title: 'Согласование',
     description: 'Называем точную стоимость и подтверждаем дату.',
-    color: 'bg-violet-500/15 text-violet-400',
+    color: 'bg-violet-500/15 text-violet-500',
     dot: 'bg-violet-500',
   },
   {
@@ -35,8 +35,8 @@ const steps = [
     icon: 'mdi:check-decagram-outline',
     title: 'Результат',
     description: 'Вы принимаете работу. Любые недочёты исправим.',
-    color: 'bg-accent/15 text-accent',
-    dot: 'bg-accent',
+    color: 'bg-emerald-500/15 text-emerald-500',
+    dot: 'bg-emerald-500',
   },
 ]
 
