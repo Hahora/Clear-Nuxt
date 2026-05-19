@@ -24,6 +24,12 @@ export default defineNuxtConfig({
     },
   },
 
+  vite: {
+    server: {
+      allowedHosts: ['intently-succinct-pitta.cloudpub.ru'],
+    },
+  },
+
   app: {
     head: {
       charset: 'utf-8',
