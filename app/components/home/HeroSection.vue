@@ -53,7 +53,7 @@ onMounted(() => {
             Используем только профессиональное оборудование и экологичные средства.
             Команда опытных специалистов знает, как эффективно убирать помещения.
           </p>
-          <div class="flex flex-wrap items-center gap-4">
+          <div class="hidden sm:flex flex-wrap items-center gap-4">
             <button class="btn-primary" @click="scrollTo('#contact')">
               <Icon name="mdi:calculator-variant-outline" />
               Рассчитать стоимость
@@ -93,9 +93,9 @@ onMounted(() => {
           </div>
 
           <!-- Вырез сверху-справа: кнопка -->
-          <div class="absolute top-0 right-0 z-20 bg-bg rounded-bl-2xl sm:rounded-bl-3xl pb-3 pl-3 sm:pb-5 sm:pl-5">
+          <div class="absolute top-0 right-0 z-20 bg-bg rounded-bl-2xl sm:rounded-bl-3xl pb-4 pl-4 sm:pb-5 sm:pl-5">
             <button
-              class="btn-primary px-4 py-2 text-xs sm:px-6 sm:py-3 sm:text-sm shadow-lg"
+              class="btn-primary px-5 py-2.5 text-sm shadow-lg"
               @click="scrollTo('#contact')"
             >
               Заказать
@@ -104,17 +104,17 @@ onMounted(() => {
           </div>
 
           <!-- Вырез снизу-слева: телефон (только мобайл/планшет) -->
-          <div class="absolute bottom-0 left-0 z-20 lg:hidden bg-bg rounded-tr-2xl sm:rounded-tr-3xl pt-3 pr-3 sm:pt-5 sm:pr-5">
+          <div class="absolute bottom-0 left-0 z-20 lg:hidden bg-bg rounded-tr-2xl sm:rounded-tr-3xl pt-4 pr-4 sm:pt-5 sm:pr-5">
             <a
               :href="phoneTel"
-              class="inline-flex items-center gap-2.5 bg-white rounded-xl px-3 py-2 shadow-md hover:shadow-lg transition-shadow duration-200"
+              class="inline-flex items-center gap-2.5 bg-white rounded-xl px-4 py-3 shadow-md hover:shadow-lg transition-shadow duration-200"
             >
-              <div class="w-7 h-7 rounded-lg bg-accent flex items-center justify-center shrink-0">
-                <Icon name="mdi:phone" class="text-white text-xs" />
+              <div class="w-9 h-9 rounded-lg bg-accent flex items-center justify-center shrink-0">
+                <Icon name="mdi:phone" class="text-white text-sm" />
               </div>
               <div>
-                <p class="text-[10px] text-muted leading-none mb-0.5">Позвонить</p>
-                <p class="text-xs font-bold text-ink leading-none">{{ phone }}</p>
+                <p class="text-xs text-muted leading-none mb-0.5">Позвонить</p>
+                <p class="text-sm font-bold text-ink leading-none">{{ phone }}</p>
               </div>
             </a>
           </div>
