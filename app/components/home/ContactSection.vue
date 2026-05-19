@@ -181,7 +181,7 @@ useIntersectionObserver(headerRef, ([entry]) => {
           <div class="bg-ink rounded-2xl p-7 text-white relative overflow-hidden">
             <div class="absolute right-0 top-0 w-32 h-32 bg-accent/10 rounded-full translate-x-1/2 -translate-y-1/2 blur-2xl" />
             <p class="text-white/60 text-sm mb-2">Позвоните прямо сейчас</p>
-            <a :href="phoneTel" class="font-heading font-bold text-xl sm:text-2xl hover:text-accent transition-colors duration-200 block mb-5">
+            <a :href="phoneTel" class="font-heading font-bold text-xl sm:text-2xl hover:text-sky-400 transition-colors duration-200 block mb-5">
               {{ phone }}
             </a>
             <a :href="phoneTel" class="inline-flex items-center gap-2 bg-accent text-white font-semibold text-sm px-5 py-3 rounded-xl hover:bg-[#091545] transition-colors duration-200">

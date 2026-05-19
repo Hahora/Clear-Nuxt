@@ -117,20 +117,20 @@ useIntersectionObserver(headerRef, ([entry]) => {
               class="hidden sm:block absolute bottom-0 right-0 h-[90%] object-contain object-bottom pointer-events-none select-none"
             />
 
-            <div class="w-11 h-11 rounded-xl bg-accent/20 flex items-center justify-center mb-3 shrink-0">
-              <Icon name="mdi:broom" class="text-accent text-xl" />
+            <div class="w-11 h-11 rounded-xl bg-white/15 flex items-center justify-center mb-3 shrink-0">
+              <Icon name="mdi:broom" class="text-white text-xl" />
             </div>
 
-            <span class="inline-flex items-center gap-1.5 bg-accent/25 text-accent text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full w-fit mb-3">
+            <span class="inline-flex items-center gap-1.5 bg-white/15 text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full w-fit mb-3">
               <Icon name="mdi:star" class="text-[10px]" /> Популярно
             </span>
 
-            <h3 class="font-heading font-bold text-xl text-white mb-2 sm:max-w-[52%]">{{ services[0].title }}</h3>
+            <h3 class="font-heading font-bold text-2xl text-white mb-2 sm:max-w-[52%]">{{ services[0].title }}</h3>
             <p class="text-white/55 text-sm leading-relaxed mb-4 sm:max-w-[52%]">{{ services[0].description }}</p>
 
             <div class="grid grid-cols-2 gap-x-4 gap-y-2 mb-auto relative z-10 sm:max-w-[52%]">
               <div v-for="item in services[0].items" :key="item" class="flex items-start gap-1.5 text-sm text-white/65">
-                <Icon name="mdi:check" class="text-accent shrink-0 mt-0.5 text-sm" />
+                <Icon name="mdi:check" class="text-sky-400 shrink-0 mt-0.5 text-sm" />
                 {{ item }}
               </div>
             </div>
