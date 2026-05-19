@@ -47,7 +47,7 @@ useIntersectionObserver(headerRef, ([entry]) => {
         <div class="contact-form-wrap lg:col-span-3 bg-white rounded-2xl shadow-card overflow-hidden">
 
           <!-- Form header stripe -->
-          <div class="bg-gradient-to-r from-accent to-sky-600 px-8 py-4 flex items-center gap-3">
+          <div class="bg-gradient-to-r from-accent to-[#091545] px-8 py-4 flex items-center gap-3">
             <Icon name="mdi:send" class="text-white text-xl" />
             <p class="text-white font-semibold">Бесплатный расчёт стоимости</p>
             <span class="ml-auto text-white/70 text-sm hidden sm:block">Ответим за 15 мин</span>
@@ -184,7 +184,7 @@ useIntersectionObserver(headerRef, ([entry]) => {
             <a :href="phoneTel" class="font-heading font-bold text-2xl hover:text-accent transition-colors duration-200 block mb-5">
               {{ phone }}
             </a>
-            <a :href="phoneTel" class="inline-flex items-center gap-2 bg-accent text-white font-semibold text-sm px-5 py-3 rounded-xl hover:bg-sky-600 transition-colors duration-200">
+            <a :href="phoneTel" class="inline-flex items-center gap-2 bg-accent text-white font-semibold text-sm px-5 py-3 rounded-xl hover:bg-[#091545] transition-colors duration-200">
               <Icon name="mdi:phone" />
               Позвонить
             </a>

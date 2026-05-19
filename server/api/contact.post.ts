@@ -45,11 +45,11 @@ export default defineEventHandler(async (event) => {
           <td align="center" style="padding-bottom:24px;">
             <table cellpadding="0" cellspacing="0">
               <tr>
-                <td style="background:#0EA5E9;border-radius:12px;width:40px;height:40px;text-align:center;vertical-align:middle;">
+                <td style="background:#0D2167;border-radius:12px;width:40px;height:40px;text-align:center;vertical-align:middle;">
                   <span style="color:white;font-size:20px;line-height:40px;">🧹</span>
                 </td>
                 <td style="padding-left:10px;font-size:20px;font-weight:700;color:#0f172a;">
-                  Чистый <span style="color:#0EA5E9;">Дом</span>
+                  Чистый <span style="color:#0D2167;">Дом</span>
                 </td>
               </tr>
             </table>
@@ -63,7 +63,7 @@ export default defineEventHandler(async (event) => {
             <!-- Шапка карточки -->
             <table width="100%" cellpadding="0" cellspacing="0">
               <tr>
-                <td style="background:linear-gradient(135deg,#0EA5E9 0%,#0284c7 100%);padding:24px 32px;">
+                <td style="background:linear-gradient(135deg,#0D2167 0%,#0284c7 100%);padding:24px 32px;">
                   <p style="margin:0;color:rgba(255,255,255,0.7);font-size:12px;letter-spacing:0.1em;text-transform:uppercase;font-weight:600;margin-bottom:4px;">Новая заявка</p>
                   <h1 style="margin:0;color:#ffffff;font-size:22px;font-weight:700;">${name}</h1>
                 </td>
@@ -76,7 +76,7 @@ export default defineEventHandler(async (event) => {
               <tr>
                 <td style="padding:16px 32px;border-bottom:1px solid #f1f5f9;">
                   <p style="margin:0 0 3px;color:#94a3b8;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;font-weight:600;">Телефон</p>
-                  <a href="tel:${phone}" style="color:#0EA5E9;font-size:18px;font-weight:700;text-decoration:none;">${phone}</a>
+                  <a href="tel:${phone}" style="color:#0D2167;font-size:18px;font-weight:700;text-decoration:none;">${phone}</a>
                 </td>
               </tr>
 
@@ -112,7 +112,7 @@ export default defineEventHandler(async (event) => {
               <tr>
                 <td style="padding:20px 32px 28px;">
                   <a href="tel:${phone}"
-                     style="display:block;background:#0EA5E9;color:#ffffff;text-align:center;padding:14px 24px;border-radius:12px;font-size:15px;font-weight:700;text-decoration:none;letter-spacing:0.01em;">
+                     style="display:block;background:#0D2167;color:#ffffff;text-align:center;padding:14px 24px;border-radius:12px;font-size:15px;font-weight:700;text-decoration:none;letter-spacing:0.01em;">
                     Позвонить клиенту
                   </a>
                 </td>

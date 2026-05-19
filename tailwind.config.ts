@@ -12,8 +12,8 @@ export default {
       colors: {
         bg: '#F8FAFB',
         ink: '#0F172A',
-        primary: '#0EA5E9',
-        accent: '#0EA5E9',
+        primary: '#0D2167',
+        accent: '#0D2167',
         muted: '#64748B',
         surface: '#E2E8F0',
         'surface-dark': '#CBD5E1',

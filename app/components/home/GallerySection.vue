@@ -61,7 +61,7 @@ const categories = [
     placeholder: 'from-sky-700 to-sky-950',
     placeholderIcon: 'mdi:window-closed-variant',
     accentColor: 'text-sky-400',
-    accentBg: 'bg-sky-500/25',
+    accentBg: 'bg-blue-500/25',
     numberColor: 'text-sky-400/15',
     overlayGradient: 'from-sky-950/80 via-sky-900/30 to-transparent',
     wide: true,
@@ -101,7 +101,7 @@ useIntersectionObserver(headerRef, ([entry]) => {
 </script>
 
 <template>
-  <section id="gallery" class="py-section bg-sky-50">
+  <section id="gallery" class="py-section bg-blue-50">
     <div class="container-site">
 
       <!-- Header -->
@@ -197,7 +197,7 @@ useIntersectionObserver(headerRef, ([entry]) => {
             </div>
 
             <!-- Notch button -->
-            <div class="absolute bottom-0 right-0 z-30 bg-sky-50 rounded-tl-3xl pt-3 pl-3">
+            <div class="absolute bottom-0 right-0 z-30 bg-blue-50 rounded-tl-3xl pt-3 pl-3">
               <button class="btn-primary text-sm shadow-lg" @click="scrollToContact(cat.title)">
                 <Icon name="mdi:send" /> Заказать
               </button>

@@ -43,7 +43,7 @@ const advantages = [
     title: 'Цена без сюрпризов',
     description: 'Говорим стоимость сразу, после осмотра. Никаких скрытых доплат по факту.',
     color: 'text-sky-400',
-    bg: 'bg-sky-500/15',
+    bg: 'bg-blue-500/15',
   },
 ]
 
@@ -60,7 +60,7 @@ function scrollToContact() {
 </script>
 
 <template>
-  <section id="why-us" class="py-section bg-sky-50 relative overflow-hidden">
+  <section id="why-us" class="py-section bg-blue-50 relative overflow-hidden">
 
     <!-- Background decorations -->
     <div class="absolute top-0 right-0 w-96 h-96 bg-accent/8 rounded-full translate-x-1/2 -translate-y-1/2 blur-3xl pointer-events-none" />

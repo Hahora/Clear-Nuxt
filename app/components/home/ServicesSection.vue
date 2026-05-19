@@ -81,7 +81,7 @@ useIntersectionObserver(headerRef, ([entry]) => {
 </script>
 
 <template>
-  <section id="services" class="py-section bg-sky-50">
+  <section id="services" class="py-section bg-blue-50">
     <div class="container-site">
 
       <!-- Header -->
@@ -147,7 +147,7 @@ useIntersectionObserver(headerRef, ([entry]) => {
             </div>
           </div>
 
-          <div class="absolute bottom-0 right-0 z-20 bg-sky-50 rounded-tl-3xl pt-3 pl-3">
+          <div class="absolute bottom-0 right-0 z-20 bg-blue-50 rounded-tl-3xl pt-3 pl-3">
             <button class="btn-primary text-sm shadow-lg" @click="scrollToContact(services[0].title)">
               <Icon name="mdi:send" />
               Заказать
@@ -262,7 +262,7 @@ useIntersectionObserver(headerRef, ([entry]) => {
             </div>
           </div>
 
-          <div class="absolute bottom-0 right-0 z-20 bg-sky-50 rounded-tl-3xl pt-3 pl-3">
+          <div class="absolute bottom-0 right-0 z-20 bg-blue-50 rounded-tl-3xl pt-3 pl-3">
             <button class="btn-primary text-sm shadow-lg" @click="scrollToContact(services[3].title)">
               <Icon name="mdi:send" />
               Заказать
