@@ -1,6 +1,12 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { useIntersectionObserver } from '@vueuse/core'
+import { Swiper, SwiperSlide } from 'swiper/vue'
+import { Pagination, Autoplay } from 'swiper/modules'
+import 'swiper/css'
+import 'swiper/css/pagination'
+
+const swiperModules = [Pagination, Autoplay]
 
 const reviews = [
   {
@@ -89,50 +95,78 @@ useIntersectionObserver(headerRef, ([entry]) => {
         </p>
       </div>
 
-      <!-- Grid -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-        <div
-          v-for="(review, i) in reviews"
-          :key="review.name"
-          class="reveal-item bg-white rounded-2xl p-6 shadow-card flex flex-col gap-4"
-          :class="{ 'is-revealed': isVisible }"
-          :style="{ transitionDelay: isVisible ? (i * 0.08) + 's' : '0s' }"
+      <!-- Carousel -->
+      <div
+        class="reveal-item"
+        :class="{ 'is-revealed': isVisible }"
+        :style="{ transitionDelay: isVisible ? '0.15s' : '0s' }"
+      >
+        <Swiper
+          :modules="swiperModules"
+          :slides-per-view="1"
+          :space-between="16"
+          :breakpoints="{
+            640:  { slidesPerView: 2, spaceBetween: 20 },
+            1024: { slidesPerView: 3, spaceBetween: 24 },
+          }"
+          :autoplay="{ delay: 4000, disableOnInteraction: true, pauseOnMouseEnter: true }"
+          :pagination="{ clickable: true }"
+          :loop="true"
+          class="reviews-swiper pb-12"
         >
-          <!-- Top: avatar + name + stars -->
-          <div class="flex items-start gap-3">
-            <div
-              class="w-11 h-11 rounded-full flex items-center justify-center text-white font-bold text-sm shrink-0"
-              :class="review.color"
-            >
-              {{ review.initials }}
-            </div>
-            <div class="flex-1 min-w-0">
-              <p class="font-semibold text-ink text-sm leading-tight">{{ review.name }}</p>
-              <p class="text-xs text-muted">{{ review.city }}</p>
-            </div>
-            <div class="flex gap-0.5 shrink-0">
-              <Icon
-                v-for="n in 5"
-                :key="n"
-                name="mdi:star"
-                class="text-amber-400 text-sm"
-              />
-            </div>
-          </div>
+          <SwiperSlide v-for="review in reviews" :key="review.name" class="h-auto">
+            <div class="bg-white rounded-2xl p-6 shadow-card flex flex-col gap-4 h-full">
 
-          <!-- Text -->
-          <p class="text-sm text-ink/75 leading-relaxed flex-1">{{ review.text }}</p>
+              <!-- Top: avatar + name + stars -->
+              <div class="flex items-start gap-3">
+                <div
+                  class="w-11 h-11 rounded-full flex items-center justify-center text-white font-bold text-sm shrink-0"
+                  :class="review.color"
+                >
+                  {{ review.initials }}
+                </div>
+                <div class="flex-1 min-w-0">
+                  <p class="font-semibold text-ink text-sm leading-tight">{{ review.name }}</p>
+                  <p class="text-xs text-muted">{{ review.city }}</p>
+                </div>
+                <div class="flex gap-0.5 shrink-0">
+                  <Icon v-for="n in 5" :key="n" name="mdi:star" class="text-amber-400 text-sm" />
+                </div>
+              </div>
 
-          <!-- Bottom: service + date -->
-          <div class="flex items-center justify-between pt-3 border-t border-surface">
-            <span class="text-xs font-medium text-accent bg-accent/10 px-2.5 py-1 rounded-full">
-              {{ review.service }}
-            </span>
-            <span class="text-xs text-muted">{{ review.date }}</span>
-          </div>
-        </div>
+              <!-- Text -->
+              <p class="text-sm text-ink/75 leading-relaxed flex-1">{{ review.text }}</p>
+
+              <!-- Bottom: service + date -->
+              <div class="flex items-center justify-between pt-3 border-t border-surface">
+                <span class="text-xs font-medium text-accent bg-accent/10 px-2.5 py-1 rounded-full">
+                  {{ review.service }}
+                </span>
+                <span class="text-xs text-muted">{{ review.date }}</span>
+              </div>
+
+            </div>
+          </SwiperSlide>
+        </Swiper>
       </div>
 
     </div>
   </section>
 </template>
+
+<style>
+.reviews-swiper .swiper-pagination-bullet {
+  background: #cbd5e1;
+  opacity: 1;
+  width: 8px;
+  height: 8px;
+}
+.reviews-swiper .swiper-pagination-bullet-active {
+  background: #0D2167;
+  width: 24px;
+  border-radius: 4px;
+}
+.reviews-swiper .swiper-slide {
+  height: auto;
+}
+</style>
