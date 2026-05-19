@@ -84,7 +84,7 @@ function scrollToContact() {
       </div>
 
       <!-- Grid -->
-      <div class="why-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-14">
+      <div class="why-grid grid grid-cols-2 lg:grid-cols-3 gap-5 mb-14">
         <div
           v-for="(item, i) in advantages"
           :key="i"
