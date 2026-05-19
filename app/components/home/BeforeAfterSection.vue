@@ -24,6 +24,13 @@ const examples = [
     before: '/images/before-after/before-3.jpg',
     after: '/images/before-after/after-3.jpg',
   },
+  {
+    id: 4,
+    title: 'Химчистка дивана',
+    description: 'Пятна и запахи — до и после',
+    before: '/images/before-after/before-4.jpg',
+    after: '/images/before-after/after-4.jpg',
+  },
 ]
 
 const headerRef = ref<HTMLElement | null>(null)
