@@ -40,25 +40,25 @@ function scrollTo(href: string) {
               <Icon name="mdi:broom" class="text-white text-xl" />
             </div>
             <span class="font-heading font-bold text-lg">
-              Чистый <span class="text-accent">Дом</span>
+              Чистый <span class="text-sky-400">Дом</span>
             </span>
           </div>
           <p class="text-white/50 text-sm leading-relaxed max-w-xs mb-4">
             Профессиональный клининг квартир, домов и коммерческих помещений с гарантией качества.
           </p>
-          <a :href="phoneTel" class="inline-flex items-center gap-2 text-white font-semibold hover:text-accent transition-colors duration-200">
-            <Icon name="mdi:phone" class="text-accent" />
+          <a :href="phoneTel" class="inline-flex items-center gap-2 text-white font-semibold hover:text-sky-400 transition-colors duration-200">
+            <Icon name="mdi:phone" class="text-sky-400" />
             {{ phone }}
           </a>
         </div>
 
         <!-- Разделы -->
         <div>
-          <p class="section-label mb-4">Разделы</p>
+          <p class="text-label font-semibold uppercase tracking-widest text-sky-400 mb-4">Разделы</p>
           <ul class="space-y-2">
             <li v-for="link in navLinks" :key="link.href">
               <button
-                class="text-white/60 text-sm hover:text-accent transition-colors duration-200"
+                class="text-white/60 text-sm hover:text-sky-400 transition-colors duration-200"
                 @click="scrollTo(link.href)"
               >
                 {{ link.label }}
@@ -69,11 +69,11 @@ function scrollTo(href: string) {
 
         <!-- Услуги -->
         <div>
-          <p class="section-label mb-4">Услуги</p>
+          <p class="text-label font-semibold uppercase tracking-widest text-sky-400 mb-4">Услуги</p>
           <ul class="space-y-2">
             <li v-for="service in serviceLinks" :key="service.label">
               <button
-                class="text-white/60 text-sm hover:text-accent transition-colors duration-200 text-left"
+                class="text-white/60 text-sm hover:text-sky-400 transition-colors duration-200 text-left"
                 @click="scrollTo('#services')"
               >
                 {{ service.label }}
@@ -84,7 +84,7 @@ function scrollTo(href: string) {
 
         <!-- Обратная связь -->
         <div>
-          <p class="section-label mb-4">Обратная связь</p>
+          <p class="text-label font-semibold uppercase tracking-widest text-sky-400 mb-4">Обратная связь</p>
           <p class="text-white/50 text-sm leading-relaxed mb-5">
             Оставьте заявку — перезвоним в течение 15 минут и рассчитаем стоимость.
           </p>
@@ -105,7 +105,7 @@ function scrollTo(href: string) {
           <p>© {{ year }} Чистый Дом. Все права защищены.</p>
           <p>ИП Смирнов Алексей Викторович · ОГРНИП 321615400087654 · ИНН 616512345678</p>
           <p>344000, г. Ростов-на-Дону, ул. Большая Садовая, д. 25, оф. 14</p>
-          <p>Разработано <a href="https://traffic-rock.com/" target="_blank" rel="noopener" class="text-white/60 font-medium hover:text-accent transition-colors duration-200">Цифровая скала</a></p>
+          <p>Разработано <a href="https://traffic-rock.com/" target="_blank" rel="noopener" class="text-white/60 font-medium hover:text-sky-400 transition-colors duration-200">Цифровая скала</a></p>
         </div>
         <NuxtLink to="/policy" class="hover:text-white transition-colors duration-200 whitespace-nowrap">
           Политика конфиденциальности
