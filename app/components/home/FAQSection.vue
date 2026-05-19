@@ -56,7 +56,7 @@ useIntersectionObserver(headerRef, ([entry]) => {
 </script>
 
 <template>
-  <section id="faq" class="py-section bg-blue-50">
+  <section id="faq" class="py-14 lg:py-24 bg-blue-50">
     <div class="container-site">
 
       <!-- Header -->
