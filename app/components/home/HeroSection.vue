@@ -53,7 +53,7 @@ onMounted(() => {
             Используем только профессиональное оборудование и экологичные средства.
             Команда опытных специалистов знает, как эффективно убирать помещения.
           </p>
-          <div class="hidden sm:flex flex-wrap items-center gap-4">
+          <div class="hidden lg:flex flex-wrap items-center gap-4">
             <button class="btn-primary" @click="scrollTo('#contact')">
               <Icon name="mdi:calculator-variant-outline" />
               Рассчитать стоимость
