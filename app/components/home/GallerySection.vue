@@ -101,7 +101,7 @@ useIntersectionObserver(headerRef, ([entry]) => {
 </script>
 
 <template>
-  <section id="gallery" class="py-section bg-sky-50">
+  <section id="gallery" class="py-14 lg:py-24 bg-sky-50">
     <div class="container-site">
 
       <!-- Header -->
@@ -118,14 +118,11 @@ useIntersectionObserver(headerRef, ([entry]) => {
       </div>
 
       <!-- Bento grid — mirrored layout -->
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
 
         <template v-for="(cat, i) in categories" :key="cat.id">
           <div
-            :class="[
-              cat.wide ? 'lg:col-span-2' : 'lg:col-span-1',
-              i % 2 === 0 ? '' : '',
-            ]"
+            :class="cat.wide ? 'sm:col-span-2 lg:col-span-2' : 'lg:col-span-1'"
             class="relative"
           >
             <div

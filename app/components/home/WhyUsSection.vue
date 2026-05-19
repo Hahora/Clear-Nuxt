@@ -60,7 +60,7 @@ function scrollToContact() {
 </script>
 
 <template>
-  <section id="why-us" class="py-section bg-sky-50 relative overflow-hidden">
+  <section id="why-us" class="py-14 lg:py-24 bg-sky-50 relative overflow-hidden">
 
     <!-- Background decorations -->
     <div class="absolute top-0 right-0 w-96 h-96 bg-accent/8 rounded-full translate-x-1/2 -translate-y-1/2 blur-3xl pointer-events-none" />
@@ -121,7 +121,7 @@ function scrollToContact() {
         :class="{ 'is-revealed': isVisible }"
         :style="{ transitionDelay: isVisible ? '0.65s' : '0s' }"
       >
-        <div class="inline-flex flex-col sm:flex-row items-center gap-4 bg-white rounded-2xl px-8 py-5 shadow-card">
+        <div class="inline-flex flex-col sm:flex-row items-center gap-4 bg-white rounded-2xl px-5 sm:px-8 py-5 shadow-card">
           <div class="text-left">
             <p class="text-ink font-semibold">Хотите убедиться лично?</p>
             <p class="text-muted text-sm">Закажите первую уборку и оцените результат</p>

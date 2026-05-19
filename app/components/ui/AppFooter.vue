@@ -30,8 +30,8 @@ function scrollTo(href: string) {
 
 <template>
   <footer class="bg-ink text-white">
-    <div class="container-site py-16">
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 pb-10 border-b border-white/10">
+    <div class="container-site py-10 lg:py-16">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-10 pb-6 lg:pb-10 border-b border-white/10">
 
         <!-- Brand -->
         <div class="sm:col-span-2 lg:col-span-1">
