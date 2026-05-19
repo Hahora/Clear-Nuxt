@@ -15,7 +15,7 @@ useIntersectionObserver(headerRef, ([entry]) => {
 </script>
 
 <template>
-  <section id="contact" class="py-section bg-bg relative overflow-hidden">
+  <section id="contact" class="py-14 lg:py-24 bg-bg relative overflow-hidden">
 
     <!-- Decorative -->
     <div class="absolute top-0 right-0 w-[400px] h-[400px] bg-accent/5 rounded-full translate-x-1/2 -translate-y-1/2 blur-3xl pointer-events-none" />
@@ -47,13 +47,17 @@ useIntersectionObserver(headerRef, ([entry]) => {
         <div class="contact-form-wrap lg:col-span-3 bg-white rounded-2xl shadow-card overflow-hidden">
 
           <!-- Form header stripe -->
+<<<<<<< HEAD
           <div class="bg-gradient-to-r from-accent to-green-800 px-8 py-4 flex items-center gap-3">
+=======
+          <div class="bg-gradient-to-r from-accent to-sky-600 px-4 sm:px-8 py-4 flex items-center gap-3">
+>>>>>>> bc7cb5d (fix: mobile responsiveness — section padding, bento grids, form, footer spacing)
             <Icon name="mdi:send" class="text-white text-xl" />
             <p class="text-white font-semibold">Бесплатный расчёт стоимости</p>
             <span class="ml-auto text-white/70 text-sm hidden sm:block">Ответим за 15 мин</span>
           </div>
 
-          <div class="p-8">
+          <div class="p-5 sm:p-8">
             <Transition name="fade-slide" mode="out-in">
 
               <!-- Success -->
@@ -181,7 +185,7 @@ useIntersectionObserver(headerRef, ([entry]) => {
           <div class="bg-ink rounded-2xl p-7 text-white relative overflow-hidden">
             <div class="absolute right-0 top-0 w-32 h-32 bg-accent/10 rounded-full translate-x-1/2 -translate-y-1/2 blur-2xl" />
             <p class="text-white/60 text-sm mb-2">Позвоните прямо сейчас</p>
-            <a :href="phoneTel" class="font-heading font-bold text-2xl hover:text-accent transition-colors duration-200 block mb-5">
+            <a :href="phoneTel" class="font-heading font-bold text-xl sm:text-2xl hover:text-accent transition-colors duration-200 block mb-5">
               {{ phone }}
             </a>
             <a :href="phoneTel" class="inline-flex items-center gap-2 bg-accent text-white font-semibold text-sm px-5 py-3 rounded-xl hover:bg-green-800 transition-colors duration-200">

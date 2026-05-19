@@ -81,8 +81,7 @@ useIntersectionObserver(headerRef, ([entry]) => {
 </script>
 
 <template>
-  <section id="services" class="py-section bg-green-50">
-    <div class="container-site">
+  <section id="services" class="py-14 lg:py-24 bg-green-50">    <div class="container-site">
 
       <!-- Header -->
       <div
@@ -98,10 +97,10 @@ useIntersectionObserver(headerRef, ([entry]) => {
       </div>
 
       <!-- Bento grid -->
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
 
         <!-- [1] Генеральная — hero card dark -->
-        <div class="lg:col-span-2 relative">
+        <div class="sm:col-span-2 lg:col-span-2 relative">
           <div
             class="reveal-item bg-ink rounded-3xl p-6 relative overflow-hidden flex flex-col h-full"
             :class="{ 'is-revealed': isVisible }"
@@ -228,7 +227,7 @@ useIntersectionObserver(headerRef, ([entry]) => {
         </div>
 
         <!-- [4] Химчистка мебели -->
-        <div class="lg:col-span-2 relative">
+        <div class="sm:col-span-2 lg:col-span-2 relative">
           <div
             class="reveal-item bg-white rounded-3xl p-6 relative overflow-hidden h-full flex flex-col"
             :class="{ 'is-revealed': isVisible }"
@@ -274,3 +273,4 @@ useIntersectionObserver(headerRef, ([entry]) => {
     </div>
   </section>
 </template>
+

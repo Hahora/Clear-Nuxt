@@ -56,7 +56,11 @@ useIntersectionObserver(headerRef, ([entry]) => {
 </script>
 
 <template>
+<<<<<<< HEAD
   <section id="faq" class="py-section bg-green-50">
+=======
+  <section id="faq" class="py-14 lg:py-24 bg-sky-50">
+>>>>>>> bc7cb5d (fix: mobile responsiveness — section padding, bento grids, form, footer spacing)
     <div class="container-site">
 
       <!-- Header -->
@@ -131,4 +135,5 @@ useIntersectionObserver(headerRef, ([entry]) => {
     </div>
   </section>
 </template>
+
 

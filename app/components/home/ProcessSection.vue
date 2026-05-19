@@ -48,7 +48,7 @@ useIntersectionObserver(headerRef, ([entry]) => {
 </script>
 
 <template>
-  <section id="process" class="py-section bg-bg relative overflow-hidden">
+  <section id="process" class="py-14 lg:py-24 bg-bg relative overflow-hidden">
 
     <!-- Decorative blobs -->
     <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent/4 rounded-full blur-3xl pointer-events-none" />
@@ -77,7 +77,7 @@ useIntersectionObserver(headerRef, ([entry]) => {
         <div class="hidden lg:block absolute top-10 left-[10%] right-[10%] h-px z-0"
              style="background: linear-gradient(to right, #10B981, #0EA5E9, #8B5CF6, #F59E0B, #10B981)" />
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-8">
           <div
             v-for="(step, i) in steps"
             :key="step.title"

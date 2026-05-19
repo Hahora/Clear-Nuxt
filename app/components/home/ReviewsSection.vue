@@ -73,7 +73,7 @@ useIntersectionObserver(headerRef, ([entry]) => {
 </script>
 
 <template>
-  <section id="reviews" class="py-section bg-bg">
+  <section id="reviews" class="py-14 lg:py-24 bg-bg">
     <div class="container-site">
 
       <!-- Header -->
